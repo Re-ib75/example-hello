@@ -15,5 +15,5 @@ use App\Http\Controllers\PagesController;
 */
 
 Route::get('/',[PagesController::class,'getIndex']);
-Route::get('/dbconn', function () {
-    return view('dbconn');});
+
+  
