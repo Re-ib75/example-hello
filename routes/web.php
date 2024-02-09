@@ -13,7 +13,6 @@ use App\Http\Controllers\PagesController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/',[PagesController::class,'getIndex']);
-
-  
+Route::resource('productss', ProductController::class);
+//Route::get('/',[PagesController::class,'getIndex']);
+//Route::post('/creat_products',[PagesController::class,'store'])->name('product.store');
