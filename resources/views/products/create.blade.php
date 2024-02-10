@@ -23,7 +23,7 @@
     </div>
 @endif
 
-<form action="{{ route('products.store') }}" method="POST">
+<form action="{{ route('productss.store') }}" method="POST">
     @csrf
 
      <div class="row">
@@ -33,6 +33,7 @@
                 <input type="text" name="name" class="form-control" placeholder="Name">
             </div>
         </div>
+
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Detail:</strong>
