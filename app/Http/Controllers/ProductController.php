@@ -26,7 +26,7 @@ class ProductController extends Controller
      */
     public function create(): View
     {
-        return view('product.create');
+        return view('products.create');
     }
 
     /**
@@ -49,9 +49,11 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(): View
+    public function show($id): View
     {
-        $product =Product::all();
+      // $product =Product::all();
+
+     $product =Product::where('id',$id)->get();
 
         return view('products.show',compact('product'));
     }
@@ -74,7 +76,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id): RedirectResponse
     {
-        dd($request);   
+        dd($request);
         $request->validate([
             'name' => 'required',
             'detail' => 'required',
